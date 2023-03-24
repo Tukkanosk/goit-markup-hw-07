@@ -37,12 +37,12 @@
           <li><a class="menu-grid__item" href="">Kontakt</a></li>
         </ul>
         <div class="menu-contact">
-          <a class="contact" href="mailto:info@example.com"><svg class="head-icon" width="16" height="12">
+          <a class="contact" href="mailto:info@example.com"><svg width="16" height="12">
             <use href="./images/symbol-defs.svg#icon-envelope
           "></use>
           </svg> info@example.com</a>
          
-          <a class="contact" href="tel:+48111111111"><svg class="head-icon" width="10" height="16">
+          <a class="contact" href="tel:+48111111111"><svg width="10" height="16">
             <use href="./images/symbol-defs.svg#icon-smartphone"></use>
           </svg> +48 111 111 111</a></div
         >
@@ -57,7 +57,7 @@
                   .buttons-grid__item
               .products-grid
                   .products-grid__item
-                  .products-grid__item__overlay
+                      .products-grid__item__overlay
                   .product-box
                      .product-box__title
                       .product-box__description
@@ -68,27 +68,27 @@
       <ul class="buttons-grid">
         <li>
           <button type="button" class="buttons-grid__item">
-            <p>Wszystkie</p>
+            <p class="buttons-grid__name">Wszystkie</p>
           </button>
         </li>
         <li>
           <button type="button" class="buttons-grid__item">
-            <p>Strony</p>
+            <p class="buttons-grid__name">Strony</p>
           </button>
         </li>
         <li>
           <button type="button" class="buttons-grid__item">
-            <p>Aplikacje</p>
+            <p class="buttons-grid__name">Aplikacje</p>
           </button>
         </li>
         <li>
           <button type="button" class="buttons-grid__item">
-            <p>Dizajn</p>
+            <p class="buttons-grid__name">Dizajn</p>
           </button>
         </li>
         <li>
           <button type="button" class="buttons-grid__item">
-            <p>Marketing</p>
+            <p class="buttons-grid__name">Marketing</p>
           </button>
         </li>
       </ul>
@@ -282,7 +282,7 @@
          .f-socials__header
          .f-socials__box
              .f-socials__box__item
-     .f-section__form
+     .f-wrapper__form
          .f-form__header
          .f-form__input
          .f-form__button
@@ -329,7 +329,7 @@
    </span></div>
      <form name="newsletter" autocomplete="off">
        <label class="f-form__header" for="user-permission-newsletter">Zapisz się do newslettera</label>
-       <div class="f-section__form">
+       <div class="f-wrapper__form">
          <input class="f-form__input" type="text" name="newsletter" id="user-permission-newsletter" placeholder="E-mail"/>
          <button class="f-form__button" type="submit">Zapisz się <svg height="24" width="24">
            <use href="./images/symbol-defs.svg#icon-icon-send"></use>
