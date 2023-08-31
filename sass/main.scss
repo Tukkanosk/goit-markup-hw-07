@@ -1,62 +1,55 @@
-@import "./components/navigation";
+@use "./components/navigation";
 @import "./utils/variables";
 @import "./components/main_index";
-/*@import "./components/main_portfolio";*/
+@import "./components/main_portfolio";
 @import "./components/main_index_modal";
 body {
   font-family: $default_font_family;
   color: $default_font_color;
   background-color: $main_background;
-  margin: 0;
+  width: $max_page_size;
+  margin: 0px;
 }
+
 /*Układ stron*/
 .main-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  background-color: #fff;
-}
-/*Styl stopki*/
-.f-page {
-  background-color: $f-background;
-  height: auto;
+  width: $max_page_size;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 60px;
+  background-color: #fff;
+  .main-container {
+    width: $container_size;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+  }
 }
 
-.f-container {
-  margin: 0;
+/*Styl stopki*/
+.f-page {
+  background-color: $f-background;
+  width: $max_page_size;
+  height: 252px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 60px;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    max-width: $container_size__t;
-    flex-wrap: wrap;
-    flex-direction: unset;
-    justify-content: center;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: $container_size__pc;
-    justify-content: space-between;
-    align-items: center;
-  }
+}
+.f-container {
+  width: $container_size;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
 }
 .f-grid {
-  padding: 60px 0 0 0;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  gap: 9px;
   list-style: none;
-  @media screen and (min-width: 1200px) {
-    align-items: normal;
-  }
   &__logo {
     font-family: "Raleway", sans-serif;
     color: #fff;
@@ -89,13 +82,9 @@ body {
   }
 }
 .f-section__socials {
+  padding: 0px auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  @media screen and (min-width: 1200px) {
-    align-items: normal;
-  }
   .f-socials__header {
     color: #fff;
     font-size: 14px;
@@ -126,37 +115,29 @@ body {
     }
   }
 }
-
-.f-section__form {
-  @media screen and (min-width: 1200px) {
-    align-items: normal;
-  }
-}
 .f-form__header {
-  padding: 10px 0 20px 0;
+  padding: 10px 10px 20px 10px;
   color: #fff;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  width: 570px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 .f-wrapper__form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    flex-direction: unset;
-  }
+  gap: 12px;
+
   .f-form__input {
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     font-family: $default_font_family;
     font-weight: 400;
@@ -166,7 +147,7 @@ body {
     color: rgba(255, 255, 255, 0.6);
     padding-left: 16px;
     background-color: $f-background;
-    min-width: calc($container_size - 2 * 15px);
+    width: 358px;
     height: 50px;
   }
   .f-form__button {
@@ -178,7 +159,7 @@ body {
     line-height: 30px;
     letter-spacing: 0.06em;
     background: $action_background;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
     display: flex;

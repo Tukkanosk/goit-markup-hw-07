@@ -2,8 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #212121;
   background-color: #fff;
-  min-width: 480px;
-  width: auto;
+  width: 1600px;
   margin: 0px;
 }
 .top-box {
